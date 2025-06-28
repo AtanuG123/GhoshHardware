@@ -15,19 +15,19 @@ export const categories = [
     id: 'fishing-nets',
     name: 'Fishing Nets',
     description: 'High-quality nets for all fishing needs',
-    image: 'https://i.postimg.cc/QCDbSWfr/lowbucket.jpg'
+    image: 'https://i.postimg.cc/Y2hVD34R/chapa.jpg'
   },
   {
     id: 'containers-basins',
     name: 'Containers & Basins',
     description: 'Plastic containers and basins for fish farming',
-    image: 'https://i.postimg.cc/4N2b2yJG/IMG-20241005-095812.jpg'
+    image: 'https://i.postimg.cc/FzpbT0VS/tajbucket.jpg'
   },
   {
     id: 'Water-equipment',
     name: 'Water Washing Equipment',
     description: 'Essential equipment for pond management',
-    image: 'https://i.postimg.cc/Hn36Nq9B/chupri.jpg'
+    image: 'https://i.postimg.cc/vH8M3jRK/telfish.jpg'
   },
   {
     id: 'miscellaneous',

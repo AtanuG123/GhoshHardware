@@ -18,9 +18,6 @@ app.use(cors());
 
 mongoose.connect(process.env.VITE_MONGO_DB_KEY);
 
-app.get("/api/hello", (req, res) => {
-  res.json({ message: "Hello from backend haha!" });
-});
 
 app.post('/login', (req, res) => {
   const { Email, Password } = req.body;
