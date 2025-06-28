@@ -1,7 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const bcryptjs = require("bcryptjs");
+// const bcryptjs = require("bcryptjs");
+
 
 
 const dotenv = require('dotenv');
@@ -80,6 +81,7 @@ app.get('/products', (req, res) => {
     .then(product => res.json(product))
     .catch(err => res.json(err))
 })
+
 
 app.listen(process.env.VITE_BACKEND_PORT || 3002, () => {
   console.log("success");
