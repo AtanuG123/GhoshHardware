@@ -37,9 +37,8 @@ app.post('/login', (req, res) => {
     })
 })
 
-
+ 
 app.post("/register", async(req, res) => {
-  
   let { Name, Email, Phone, Address, Password} = req.body.formData;
   let isregister = "";
   isregister = await UserModel.findOne({ Email: Email })
@@ -82,6 +81,6 @@ app.get('/products', (req, res) => {
     .catch(err => res.json(err))
 })
 
-app.listen(import.meta.env.VITE_BACKEND_PORT || 3002, () => {
+app.listen(process.env.VITE_BACKEND_PORT || 3002, () => {
   console.log("success");
 });
