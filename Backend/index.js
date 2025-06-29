@@ -83,6 +83,6 @@ app.get('/products', (req, res) => {
 })
 
 
-app.listen(process.env.VITE_BACKEND_PORT || 3002, () => {
+app.listen(process.env.VITE_BACKEND_PORT, () => {
   console.log("success");
 });
