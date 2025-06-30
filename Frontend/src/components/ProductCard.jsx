@@ -5,7 +5,7 @@ import { useCart } from '../context/CartContext';
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
-  console.log(product);
+  
   const handleAddToCart = (e) => {
     e.preventDefault();
     e.stopPropagation();

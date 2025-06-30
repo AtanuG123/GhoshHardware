@@ -64,7 +64,7 @@ const ProductDetail = () => {
     }
   };
 
-  const productImages = [product.image, product.image, product.image];
+  const productImages = [product.image1, product.image2, product.image3];
 
   return (
     <div className="min-h-screen bg-gray-50">

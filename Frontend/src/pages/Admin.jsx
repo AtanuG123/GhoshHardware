@@ -840,7 +840,7 @@ const Admin = () => {
                     <div className="flex items-center">
                       <img
                         className="h-10 w-10 rounded-lg object-cover"
-                        src={product.image}
+                        src={product.image1}
                         alt={product.name}
                       />
                       <div className="ml-4">
