@@ -62,7 +62,7 @@ app.post("/register", async(req, res) => {
 
 
 app.post('/productupload', (req, res) => {
-  ProductModel.create(req.body.newProduct)
+  ProductModel.create(req.body)
     .then(result => res.json(result))
     .catch(err => res.json(err))
 })

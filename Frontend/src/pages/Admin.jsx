@@ -70,7 +70,7 @@ const Admin = () => {
     </div>
   );
 }
-  if (user.Email !== "ghoshavi924@gmail.com") {
+  if (user.Email !== import.meta.env.VITE_ADMIN ) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -209,8 +209,9 @@ const Admin = () => {
       // console.log(newProduct);
       e.preventDefault();
       await axios
-        .post(`http://localhost:3002/productupload`, { newProduct })
+        .post(`${import.meta.env.VITE_ADMIN}/productupload `, { newProduct })
         .then((result) => {
+          // console.log(result)
           navigate("/admin");
         });
      
