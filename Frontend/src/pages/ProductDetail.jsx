@@ -8,6 +8,7 @@ import {
   Badge,
   ArrowLeft,
   Heart,
+  Loader,
 } from "lucide-react";
 import { products } from "../data/products";
 import { useCart } from "../context/CartContext";
@@ -19,25 +20,31 @@ const ProductDetail = () => {
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [product, setProduct] = useState();
-
+  const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState(null);
   useEffect(() => {
-    axios.post(`${import.meta.env.VITE_BACKEND_PORT}/product/`, { id }).then((item) => {
-      setProduct(item.data);
-    });
+    setLoading(true);
+    axios
+      .post(`${import.meta.env.VITE_BACKEND_PORT}/product/`, { id })
+      .then((item) => {
+        setProduct(item.data);
+      });
+    setLoading(false);
   }, [id]);
 
-  if (!product) {
+  if (!product || loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">
-            Product Not Found
-          </h1>
-          <Link to="/products" className="text-blue-600 hover:text-blue-700">
-            Back to Products
-          </Link>
+      <div className="min-h-screen flex flex-col items-center justify-center space-y-4">
+        <div className="text-gray-600 text-lg flex items-center gap-2">
+          <span>Loading product...</span>
+          <Loader className="animate-spin h-5 w-5 text-blue-600" />
         </div>
+        <Link
+          to="/products"
+          className="text-blue-600 hover:text-blue-700 text-sm"
+        >
+          Back to Products
+        </Link>
       </div>
     );
   }

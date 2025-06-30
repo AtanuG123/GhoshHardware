@@ -9,9 +9,9 @@ const About = () => {
         <div className="absolute inset-0 bg-black bg-opacity-40" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">About Bengal Fishery Hardware</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">About Ghosh Hardware</h1>
             <p className="text-xl md:text-2xl text-gray-200">
-              Serving West Bengal's fish farming community since 1995
+              Serving West Bengal's fish farming community since 2020
             </p>
           </div>
         </div>
@@ -26,13 +26,13 @@ const About = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Bengal Fishery Hardware was founded in 1995 with a mission to provide fish farmers 
+                  Bengal Fishery Hardware was founded in 2020 with a mission to provide fish farmers 
                   across West Bengal with reliable, high-quality equipment for successful aquaculture 
                   operations. What started as a small hardware store has grown into the region's most 
                   trusted supplier of fish farming equipment.
                 </p>
                 <p>
-                  Our founder, Mr. Ramesh Kumar, recognized the need for specialized equipment that 
+                  Our founder, Mr. A.K. Ghosh, recognized the need for specialized equipment that 
                   could withstand Bengal's unique climate and water conditions. His experience working 
                   with local fish farmers helped him understand their specific requirements and challenges.
                 </p>
@@ -45,7 +45,7 @@ const About = () => {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://img.freepik.com/premium-photo/png-neutral-tone-frame-transparent-background_53876-975558.jpg?semt=ais_hybrid&w=740"
                 alt="Fish farming equipment"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
@@ -109,20 +109,20 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">25+</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
               <div className="text-gray-700 font-medium">Years of Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">5,000+</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
               <div className="text-gray-700 font-medium">Fish Farmers Served</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">200+</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">40+</div>
               <div className="text-gray-700 font-medium">Equipment Types</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-              <div className="text-gray-700 font-medium">Districts Covered</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">35+</div>
+              <div className="text-gray-700 font-medium">Avobe 4.5 star Products</div>
             </div>
           </div>
         </section>
@@ -139,15 +139,15 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Ramesh Kumar"
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                alt="A.K. Ghosh"
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Ramesh Kumar</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">A.K. Ghosh</h3>
                 <p className="text-blue-600 font-medium mb-3">Founder & CEO</p>
                 <p className="text-gray-600 text-sm">
-                  With over 30 years in the aquaculture industry, Ramesh founded Bengal Fishery Hardware 
+                  With over 30 years in the aquaculture industry, Mr. Ghosh founded Bengal Fishery Hardware 
                   to bridge the gap between farmers and quality equipment.
                 </p>
               </div>
@@ -155,15 +155,15 @@ const About = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Priya Devi"
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                alt="A. Ghosh"
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Priya Devi</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">A. Ghosh</h3>
                 <p className="text-blue-600 font-medium mb-3">Technical Director</p>
                 <p className="text-gray-600 text-sm">
-                  Priya leads our technical team, ensuring all equipment meets quality standards 
+                  A. Ghosh leads our technical team, ensuring all equipment meets quality standards 
                   and providing installation guidance to customers.
                 </p>
               </div>
@@ -171,15 +171,15 @@ const About = () => {
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Amit Ghosh"
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                alt="A.K. Ghosh"
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Amit Ghosh</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">A.K. Ghosh</h3>
                 <p className="text-blue-600 font-medium mb-3">Sales Manager</p>
                 <p className="text-gray-600 text-sm">
-                  Amit manages our sales operations and customer relationships, ensuring farmers 
+                  A.K. Ghosh manages our sales operations and customer relationships, ensuring farmers 
                   get the right equipment for their specific needs.
                 </p>
               </div>

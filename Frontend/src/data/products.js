@@ -2,13 +2,13 @@ export const categories = [
   {
     id: 'suction-hose',
     name: 'Suction Hose',
-    description: 'Pumps and aeration systems for ponds',
+    description: ' Durable and flexible,Made from high-quality materials,',
     image: 'https://i.postimg.cc/GmWV7kc4/eco-flex.jpg'
   },
   {
     id: 'salt',
     name: 'Premium Salt',
-    description: 'Medicines and health supplements for fish',
+    description: 'Refined free flow iodised salt',
     image: 'https://i.postimg.cc/DyHrbGrj/IMG-20241006-130127.jpg'
   },
   {
@@ -26,14 +26,14 @@ export const categories = [
   {
     id: 'Water-equipment',
     name: 'Water Washing Equipment',
-    description: 'Essential equipment for pond management',
+    description: 'Essential equipment for water washing',
     image: 'https://i.postimg.cc/vH8M3jRK/telfish.jpg'
   },
   {
     id: 'miscellaneous',
     name: 'Miscellaneous',
-    description: 'Feeding systems and storage solutions',
-    image: 'https://i.postimg.cc/Y2hVD34R/chapa.jpg'
+    description: 'Various range of products',
+    image: 'https://i.postimg.cc/SQvq1Rg0/balti.jpg'
   }
 ];
 

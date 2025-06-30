@@ -14,7 +14,7 @@ import {
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import { categories } from '../data/products';
-import logo from "../image/logo-png.png"
+import logo from "../image/Ghosh.png"
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -44,7 +44,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
              <img  className="h-8 w-9 text-blue-600" src={logo}></img>
-            <span className="text-xl font-bold text-gray-800">Ghosh hardware</span>
+            <span className="text-l font-bold text-gray-800">Ghosh Hardware</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -111,7 +111,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
+                className="p-2 cursor-pointer text-gray-600 hover:text-blue-600 transition-colors"
               >
                 <User className="h-6 w-6" />
               </button>

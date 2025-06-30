@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-import { Filter, SortAsc, SortDesc, Grid, List } from "lucide-react";
+import { useSearchParams,Link } from "react-router-dom";
+import { Filter, SortAsc, SortDesc, Grid, List,Loader } from "lucide-react";
 import ProductCard from "../components/ProductCard";
 import { categories } from "../data/products";
 import axios from "axios";
@@ -12,18 +12,35 @@ const Products = () => {
   const [sortOrder, setSortOrder] = useState("asc");
   const [showFilters, setShowFilters] = useState(false);
   const [viewMode, setViewMode] = useState("grid");
-
+  const [loading, setLoading] = useState(true);
   const searchQuery = searchParams.get("search") || "";
   const filterParam = searchParams.get("filter") || "";
 
   const [product, setProduct] = useState([]);
+
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_BACKEND_PORT}/products`).then((res) => {
+  setLoading(true);
+  axios
+    .get(`${import.meta.env.VITE_BACKEND_PORT}/products`)
+    .then((res) => {
       setProduct(res.data);
+    })
+    .catch((err) => {
+      console.error("Error fetching products:", err);
+      setProduct([]); // fallback to avoid undefined
+    })
+    .finally(() => {
+      setLoading(false); // ✅ only after response/error
     });
-  }, []);
+}, []);
+
+  
+
+ 
+
   const filteredAndSortedProducts = useMemo(() => {
-    let filtered = [...product];
+if (loading || !product) return [];
+  let filtered = [...product];
 
     // Search filter
     if (searchQuery) {
@@ -51,7 +68,7 @@ const Products = () => {
       filtered = filtered.filter(
         (product) => product.category === selectedCategory
       );
-      console.log(product.category, "j");
+      // console.log(product.category, "j");
     }
 
     // Price range filter
@@ -59,7 +76,7 @@ const Products = () => {
       (product) =>
         product.price >= priceRange[0] && product.price <= priceRange[1]
     );
-    console.log(filtered);
+    // console.log(filtered);
     // Sort
     filtered.sort((a, b) => {
       let aValue, bValue;
@@ -95,6 +112,23 @@ const Products = () => {
     sortBy,
     sortOrder,
   ]);
+
+   if(loading){
+     return (
+      <div className="min-h-screen flex flex-col items-center justify-center space-y-4">
+        <div className="text-gray-600 text-lg flex items-center gap-2">
+          <span>Loading product...</span>
+          <Loader className="animate-spin h-5 w-5 text-blue-600" />
+        </div>
+        <Link
+          to="/"
+          className="text-blue-600 hover:text-blue-700 text-sm"
+        >
+          Back to Home
+        </Link>
+      </div>
+    );
+  }  
 
   const handlePriceRangeChange = (index, value) => {
     const newRange = [...priceRange];
@@ -169,9 +203,7 @@ const Products = () => {
                         <span className="ml-2 text-sm text-gray-700">
                           {category.name}
                         </span>
-                        <div>
-                          {selectedCategory},{category.id}
-                        </div>
+                       
                       </label>
                     ))}
                   </div>

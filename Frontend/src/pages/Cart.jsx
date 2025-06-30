@@ -147,7 +147,7 @@ const Cart = () => {
               <div className="space-y-3">
                 {isLoggedIn ? (
                   <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                    Proceed to Checkout
+                    Proceed for Booking
                   </button>
                 ) : (
                   <div className="space-y-2">
@@ -155,7 +155,7 @@ const Cart = () => {
                       to="/login"
                       className="block w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center"
                     >
-                      Login to Checkout
+                      Login for Booking
                     </Link>
                     <p className="text-xs text-gray-600 text-center">
                       or{' '}
@@ -175,10 +175,9 @@ const Cart = () => {
               </div>
 
               <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <h3 className="text-sm font-medium text-blue-900 mb-2">Free Shipping</h3>
-                <p className="text-xs text-blue-700">
-                  Enjoy free shipping on all orders within Kolkata area. 
-                  Same-day delivery available for fresh products.
+                <h3 className="text-sm font-medium text-blue-900 mb-2">Important Note</h3>
+                <p className="text-xs text-red-700">
+                  We only receives order booking in advance. We don't deliver products. 
                 </p>
               </div>
             </div>

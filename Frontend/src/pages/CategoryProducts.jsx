@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Filter, SortAsc, SortDesc, Grid, List } from "lucide-react";
+import { Filter, SortAsc, SortDesc, Grid, List,Loader } from "lucide-react";
 import ProductCard from "../components/ProductCard";
 import { categories } from "../data/products";
 import axios from "axios";
@@ -12,13 +12,16 @@ const CategoryProducts = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [viewMode, setViewMode] = useState("grid");
   const [product, setProduct] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
+    setLoading(true);
     axios.get(`${import.meta.env.VITE_BACKEND_PORT}/products`).then((res) => {
       setProduct(res.data);
+      setLoading(false);
     });
   }, []);
 
+ 
   const categoryProduct = product.filter(
     (product) => product.category === categoryId
   );
@@ -44,6 +47,7 @@ const CategoryProducts = () => {
   );
 
   const filteredAndSortedProducts = useMemo(() => {
+    if (loading || !categoryProduct) return [];
     let filtered = [...categoryProduct];
 
     // Price range filter
@@ -85,7 +89,19 @@ const CategoryProducts = () => {
     newRange[index] = value;
     setPriceRange(newRange);
   };
-
+ if (loading) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center space-y-4">
+        <div className="text-gray-600 text-lg flex items-center gap-2">
+          <span>Loading product...</span>
+          <Loader className="animate-spin h-5 w-5 text-blue-600" />
+        </div>
+        <Link to="/" className="text-blue-600 hover:text-blue-700 text-sm">
+          Back to Home
+        </Link>
+      </div>
+    );
+  };
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -104,7 +120,7 @@ const CategoryProducts = () => {
 
         {/* Category Header */}
         <div className="mb-8">
-          <div className="relative h-48 rounded-lg overflow-hidden mb-6">
+          <div className="relative h-58 rounded-lg overflow-hidden mb-6">
             <img
               src={category[0].image}
               alt={category[0].name}

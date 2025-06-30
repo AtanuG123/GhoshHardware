@@ -17,23 +17,28 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    setIsLoading(true);
+  e.preventDefault();
+  setError("");
+  setIsLoading(true);
 
-    try {
-      login(Email, Password).then((success) => {
-        console.log(success);
-        if (success) {
-          navigate(from, { replace: true });
-        } else {
-          setError("Invalid email or password");
-        }
-      });
-    } finally {
-      setIsLoading(false);
+  try {
+    const success = await login(Email, Password); // ✅ await login
+
+    console.log(success);
+
+    if (success) {
+      navigate(from, { replace: true });
+    } else {
+      setError("Invalid email or password");
     }
-  };
+  } catch (err) {
+    console.error("Login error:", err);
+    setError("Something went wrong. Please try again.");
+  } finally {
+    setIsLoading(false); // ✅ now this runs after everything completes
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -151,7 +156,7 @@ const Login = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="group cursor-pointer relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? "Signing in..." : "Sign in"}
               </button>

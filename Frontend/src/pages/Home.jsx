@@ -64,18 +64,18 @@ const Home = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">
               Premium Equipment
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-base text-gray-600">
               Professional-grade equipment for serious fish farmers
             </p>
           </div>
           <Link
             to="/products?filter=premium"
-            className="flex items-center text-blue-600 hover:text-blue-700 font-medium"
+            className="flex items-center text-blue-600 hover:text-black-700 font-medium"
           >
-            View All
+            ViewAll
             <ArrowRight className="ml-1 h-4 w-4" />
           </Link>
         </div>
@@ -92,7 +92,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
                 Special Offers
               </h2>
               <p className="text-lg text-gray-600">
@@ -103,7 +103,7 @@ const Home = () => {
               to="/products?filter=sale"
               className="flex items-center text-blue-600 hover:text-blue-700 font-medium"
             >
-              View All Deals
+              ViewAll 
               <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Wrench, Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
-import logo from "../image/logo2.png"
+import logo from "../image/Ghosh.png"
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">

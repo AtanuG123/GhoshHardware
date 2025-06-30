@@ -55,7 +55,7 @@ const Profile = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           {/* Header */}
-          <div className="bg-blue-600 px-6 py-8">
+          <div className="bg-blue-950 px-6 py-8">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <div className="bg-white bg-opacity-20 p-3 rounded-full">
@@ -63,8 +63,8 @@ const Profile = () => {
                 </div>
                 <div>
                   <h1 className="text-2xl font-bold text-white">{user.Name}</h1>
-                  <p className="text-blue-100">
-                    {user.Email === "ghoshavi924@gmail.com"
+                  <p className="text-white">
+                    {user.Email === import.meta.env.VITE_ADMIN
                       ? "Administrator"
                       : "Customer"}
                   </p>
