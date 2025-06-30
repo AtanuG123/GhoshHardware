@@ -70,7 +70,8 @@ const Admin = () => {
     </div>
   );
 }
-  if (user.Email !== import.meta.env.VITE_ADMIN) {
+  // if (user.Email !== import.meta.env.VITE_ADMIN) {
+  if (user.Email !== "ghoshavi924@gmail.com") {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -145,8 +146,8 @@ const Admin = () => {
 
   const filteredProducts = product.filter(
     (product) =>
-      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.category.toLowerCase().includes(searchTerm.toLowerCase())
+      product?.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product?.category?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleFormChange = (e) => {

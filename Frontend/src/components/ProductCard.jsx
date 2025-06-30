@@ -5,7 +5,7 @@ import { useCart } from '../context/CartContext';
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
-
+  console.log(product);
   const handleAddToCart = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
       <Link to={`/product/${product.id}`}>
         <div className="relative">
           <img
-            src={product.image}
+            src={product.image1}
             alt={product.name}
             className="w-full h-68 object-cover"
           />
